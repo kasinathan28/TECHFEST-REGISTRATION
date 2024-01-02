@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-image: url("../assets/bg/auto.webp");
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+nav {
+  background-color: #33014a;
+  color: white;
+  height: 100px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.bar {
+  width: 1.5px;
+  background: #fff;
+  height: 70px;
+  margin: 10px;
+}
+
+nav .carmtif-logo {
+  width: 180px;
+  height: auto;
+  margin-left: 10px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+nav .carmel-logo {
+  width: 180px;
+  height: auto;
+  margin-left: 50px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.back-button {
+  background-color: #fff;
+  color: #33014a;
+  border: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #33014a;
+  color: white;
+}
+
+.main {
+  width: 100%;
+  height: 200px;
+  margin: 130px auto;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.card-container {
+  width: 85%;
+  justify-content: center;
+  margin: auto;
+  height: auto;
+  padding: 20px;
+  padding-bottom: 50px;
+  margin-bottom: 80px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  width: 48%;
+  text-align: center;
+  height: 250px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.gallery {
+  width: 35%;
+  margin: 10px;
+  height: 90%;
+  float: left;
+  left: 0;
+  border-radius: 20px;
+  background: #33014a;
+}
+
+.name {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.info {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column; 
+    margin: auto;
+    margin-right: 10px;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+    bottom: -100%;
+    position: absolute;
+    transition: 0.3s ease;
+    opacity: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+
+.register-btn{
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    height: 20px;
+    width: 20%;
+    background-color: #fff;
+    color: #33014a;
+    align-items: center;
+    margin: auto;
+    position: fixed;
+    right: 30px; /* Adjust as needed */
+    bottom: 30px; /* Adjust as needed */
+    float: right;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #f0f0f0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .info {
+  background: #33014a;
+  opacity: 1;
+}
+
+.card:hover .info {
+  bottom: 0;
+}
+
+/* .card:hover .register-btn{
+
+} */
