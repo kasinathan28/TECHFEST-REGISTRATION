@@ -195,54 +195,74 @@ nav .carmel-logo {
 }
 
 
-/* Media query for smaller screen */
 
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
 
+  body {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Add this to hide horizontal overflow */
+  }
 
-nav{
-  justify-content:center;
-  align-items: center;
-  display: flex;
-  margin: auto;
-}
+  nav {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    padding: 0px;
+    padding-top: 20px;
+    width: 110px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
-nav .carmel-logo{
-  margin-left: -10px;
-}
+  nav .carmel-logo {
+    margin-left: -10px;
+    width:230px;
+  }
 
-.back-button{
-  display: none;
+  .back-button {
+    display: none;
+  }
 
-}
+  .main {
+    margin-top: 0px;
+    margin-right: 0; /* Remove the right margin causing overflow */
+  }
 
-.card-container{
-  width: 90%;
-  margin-top: -30px;
-}
+  .card-container {
+    width: 90%;
+    margin-top: -30px;
+  }
 
-.card{
-  width: 100%;
-  height: 400px;
-}
-.card-body{
-  align-items: center;
-  margin: auto;
-}
-.gallery{
-  height: 95%;
-}
-.info{
-  height: 94%;
-}
-.row{
-  display: flex;
-  flex-direction: column;
-}
+  .card {
+    width: 100%;
+    height: 400px;
+  }
 
-.register-btn{
-  padding: 20px;
-  padding-bottom: 30px;
-}
+  .card-body {
+    align-items: center;
+    margin: auto;
+  }
 
+  .gallery {
+    height: 95%;
+  }
+
+  .info {
+    height: 94%;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .register-btn {
+    padding: 20px;
+    padding-bottom: 30px;
+  }
 }
