@@ -120,6 +120,13 @@ nav .carmel-logo {
   left: 0;
   border-radius: 20px;
   background: #33014a;
+  overflow: hidden; /* Add this to hide any overflowing parts of the image */
+}
+
+.gallery img {
+  object-fit: cover;
+  width: 100%; /* Adjusted to make the image fill the container */
+  height: 100%; /* Adjusted to make the image fill the container */
 }
 
 .name {
@@ -138,6 +145,7 @@ nav .carmel-logo {
     margin-right: 10px;
     top: 0;
     right: 0;
+    text-align: left;
     border-radius: 20px;
     bottom: -100%;
     position: absolute;
@@ -152,6 +160,8 @@ nav .carmel-logo {
   }
   
   li {
+    /* margin-left: 10px; */
+    padding: 10px;
     margin-bottom: 8px;
     color: #fff;
   }
