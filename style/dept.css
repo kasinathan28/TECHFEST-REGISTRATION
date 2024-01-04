@@ -10,16 +10,14 @@ body {
 }
 
 nav {
-  background-color: #33014a;
+  background-color: rgba(0, 0, 0, 0.1);
   color: white;
   height: 100px;
   display: flex;
-  padding: 10px;
   align-items: center;
-  position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  padding-top: 20px;
 }
 
 .bar {
@@ -67,7 +65,7 @@ nav .carmel-logo {
   width: 100%;
   text-wrap: balance;
   height: 200px;
-  margin: 130px auto;
+  /* margin: 130px auto; */
   color: #fff;
   justify-content: center;
   display: flex;
@@ -75,7 +73,11 @@ nav .carmel-logo {
   text-align: center;
   margin-bottom: 0;
 }
-
+.dept-logo {
+  width: 100px;
+  justify-content: center;
+  margin: auto;
+}
 .card-container {
   width: 85%;
   justify-content: center;
@@ -105,6 +107,11 @@ nav .carmel-logo {
   position: relative;
 }
 
+
+
+
+
+
 .card-body {
   width: 100%;
   height: 100%;
@@ -120,7 +127,9 @@ nav .carmel-logo {
   left: 0;
   border-radius: 20px;
   background: #33014a;
-  overflow: hidden; /* Add this to hide any overflowing parts of the image */
+  box-shadow: 0 4px 8px #000000;
+  overflow: hidden;
+  transition: 0.3s ease all;
 }
 
 .gallery img {
@@ -137,56 +146,64 @@ nav .carmel-logo {
 }
 
 .info {
-    width: 60%;
-    height: 90%;
-    display: flex;
-    flex-direction: column; 
-    margin: auto;
-    margin-right: 10px;
-    top: 0;
-    right: 0;
-    text-align: left;
-    border-radius: 20px;
-    bottom: -100%;
-    position: absolute;
-    transition: 0.3s ease;
-    opacity: 0;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 15px;
-    margin: 0;
-  }
-  
-  li {
-    /* margin-left: 10px; */
-    padding: 10px;
-    margin-bottom: 8px;
-    color: #fff;
-  }
-  
+  width: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-right: 10px;
+  top: 0;
+  right: 0;
+  text-align: left;
+  border-radius: 20px;
+  bottom: -100%;
+  position: absolute;
+  transition: 0.3s ease;
+  opacity: 0;
+}
 
-.register-btn{
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    height: 20px;
-    width: 20%;
-    background-color: #fff;
-    color: #33014a;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    position: absolute;
-    text-wrap: balance;
-    right: 30px; 
-    bottom: 30px;
-    float: right;
-    cursor: pointer;
-    transition: 0.3s ease;
+ul {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.register-btn {
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  height: 20px;
+  width: 20%;
+  background-color: #fff;
+  color: #33014a;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  text-wrap: balance;
+  right: 30px;
+  bottom: 30px;
+  float: right;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #a25deb;
+  color: #fff;
+}
+.register-btn:active {
+  transform: translateY(-10px);
+  font-size: 14px;
+  box-shadow: 0 4px 8px #a25deb;
 }
 
 .card:hover {
@@ -204,34 +221,49 @@ nav .carmel-logo {
   bottom: 5px;
 }
 
-
-
 /* Media query for smaller screens */
-@media screen and (max-width: 768px) {
 
-  body {
-    justify-content: center;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden; /* Add this to hide horizontal overflow */
+@media (max-width: 480px) {
+  .main h1 {
+    font-size: 24px;
+    margin-top: 0;
   }
 
   nav {
+    width: auto;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+  }
+
+  .main h1 {
+    font-size: 20px;
+    text-wrap: wrap;
+  }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  nav {
+    padding-top: 10px;
     justify-content: center;
     align-items: center;
-    display: flex;
-    position: relative;
-    padding: 0px;
-    padding-top: 20px;
-    width: 110px;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
   }
 
   nav .carmel-logo {
-    margin-left: -10px;
-    width:230px;
+    width: 140px;
+    margin-left: 0px;
+  }
+
+  nav .carmtif-logo {
+    width: 140px;
+  }
+
+  .bar {
+    height: 30px;
+    opacity: 80%;
   }
 
   .back-button {
@@ -240,39 +272,79 @@ nav .carmel-logo {
 
   .main {
     margin-top: 0px;
-    margin-right: 0; /* Remove the right margin causing overflow */
+    margin-right: 0;
+  }
+
+  .main h1 {
+    font-size: 18px;
+    text-wrap: balance;
   }
 
   .card-container {
     width: 90%;
-    margin-top: -30px;
+    margin-top: -70px;
   }
-
-  .card {
-    width: 100%;
-    height: 400px;
-  }
-
+  
   .card-body {
-    align-items: center;
+    justify-content: center;
+    display: flex;
     margin: auto;
   }
 
-  .gallery {
-    height: 95%;
-  }
 
-  .info {
-    height: 94%;
-  }
+
+  
+  
 
   .row {
     display: flex;
     flex-direction: column;
   }
+  .card {
+    width: 100%;
+    height: 300px;
+  }
+
+  .card:hover .gallery {
+    display: none;
+  }
+
+  .card-body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .gallery {
+    height: 100%;
+    width: 95%;
+  }
+
+  .content {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+  }
+
+  .info {
+    width: 95%;
+  }
 
   .register-btn {
-    padding: 20px;
-    padding-bottom: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    right: 1;
+    bottom: 1;
+  }
+
+  .register-btn:active {
+    transform: none;
+    font-size: 18px;
+    text-decoration: none;
   }
 }
